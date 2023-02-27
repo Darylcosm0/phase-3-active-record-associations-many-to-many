@@ -127,7 +127,7 @@ Now, we can create a new `Review` instance and associate it with a `User`
 # Get a game instance
 game = Game.first
 # Create a User instance
-user = User.create(name: "Liza")
+user = User.create(name: "daryl")
 # Create a review that belongs to a game and a user
 review = Review.create(score: 8, game_id: game.id, user_id: user.id)
 ```
@@ -139,7 +139,7 @@ about the associated game; but now, we can also access data about the associated
 review.game
 # => #<Game:0x00007ff71a25f5d0 id: 1, title: "Diablo", genre: "Visual novel", ...>
 review.user
-# => #<User:0x00007ff71a26fe58 id: 1, name: "Liza", ...>
+# => #<User:0x00007ff71a26fe58 id: 1, name: "daryl", ...>
 ```
 
 In Active Record parlance, we refer to this `Review` class as a "join" class,
@@ -213,7 +213,7 @@ class):
 ```rb
 game = Game.first
 game.users
-# => [#<User:0x00007f96813a5d58 id: 1, name: "Liza", ...>]
+# => [#<User:0x00007f96813a5d58 id: 1, name: "", ...>]
 ```
 
 We can now use Active Record to go **through** the join model, `Review`, from

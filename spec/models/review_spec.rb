@@ -3,7 +3,7 @@ describe Review do
 
   before do
     game = Game.create(title: "Mario Kart", platform: "Switch", genre: "Racing", price: 60)
-    user = User.create(name: "Liza")
+    user = User.create(name: "")
     Review.create(score: 8, comment: "A classic", game_id: game.id, user_id: user.id)
   end
   

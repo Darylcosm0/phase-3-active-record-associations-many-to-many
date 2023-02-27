@@ -3,7 +3,7 @@ describe Game do
 
   before do
     game = Game.create(title: "Mario Kart", platform: "Switch", genre: "Racing", price: 60)
-    user1 = User.create(name: "Liza")
+    user1 = User.create(name: "")
     user2 = User.create(name: "Duane")
     Review.create(score: 8, comment: "A classic", game_id: game.id, user_id: user1.id)
     Review.create(score: 10, comment: "Wow what a game", game_id: game.id, user_id: user2.id)
